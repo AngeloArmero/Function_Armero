@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Activity</title>
+</head>
+<body>
+<form >
+	<label>Principal:</label>
+	<input type="number" id="P" name="principal" placeholder="Principal Amount">
+	<label>Rate:</label>
+	<input type="number" id="R" name="rate" placeholder="Rate of Interest">
+	<label>Amount:</label>
+	<input type="number" id="T" name="time" placeholder="Time Period">
+ <button type="button" onclick="calcMinterest()">Calculate</button>
+
+</form>
+<script>
+	
+	function calcMinterest(){
+		event.preventDefault();
+		const principal = parseFloat(document.getElementById("P").value);
+		const rate = parseFloat(document.getElementById("R").value);
+		const time = parseFloat(document.getElementById("T").value);
+
+	let calcMinterest= principal * rate * time;
+
+	document.write("Calculated Simple Interest:" + calcMinterest)
+		
+	}
+</script>
+</body>
+</html>
